@@ -1,0 +1,29 @@
+{
+    "wimbletech": {
+        "name": "Wimbletech",
+        "admin": "dpfletcher",
+        "users": {
+            "ebmuir": {
+                "number": "+447401571769",
+                "name": "Eric Muir",
+                "lastmsg": 10
+            },
+            "dpfletcher": {
+                "number": "+447446873754",
+                "name": "David Fletcher",
+                "lastmsg": 10
+            }
+        }
+    },
+    "admin": {
+        "name": "ericmuir.co.uk",
+        "admin": "ericmuir",
+        "users": {
+            "ericmuir": {
+                "number": "+447401571769",
+                "name": "Eric Muir",
+                "lastmsg": 10
+            }
+        }
+    }
+}

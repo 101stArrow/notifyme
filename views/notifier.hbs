@@ -1,0 +1,36 @@
+<div class="page-header">
+    <h1>{{site.name}} Notification Bot</h1>
+</div>
+
+<div class="container">
+    <select id="directory" class="form-control">
+      {{#each site.users}}
+        {{name}}
+      {{/each}}
+    </select>
+    <div class="form-group form-inline">
+        <br>
+        <label> Message:
+            <input id="text" maxlength="32" class="form-control"></input>
+        </label>
+        <button id="send" class="btn btn-primary" onclick="send()">Send</button>
+    </div>
+</div>
+
+<script>
+    function send() {
+        user = users[id - 1]
+        msg = $('#text').val()
+
+        $.post("/send", {
+            user: user.user,
+            msg: msg
+        });
+    }
+
+    var id = 1;
+
+    $("#directory").change(function() {
+        id = $(this).children(":selected").attr("id");
+    });
+</script>

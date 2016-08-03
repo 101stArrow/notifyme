@@ -1,0 +1,53 @@
+<div class="container">
+    <h1><kbd>{{domain}}</kbd> is available</h1>
+    <h4>if you would like to register it fill out the form below</h4>
+
+    <div class="row">
+        <div class="col col-md-6">
+            <h2>Basic Information</h2>
+
+            <div class="form">
+                <div class="form-group">
+                    <label>Company:
+                        <input id="compname" class="form-control">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Username:
+                        <input id="adminuser" class="form-control">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Email:
+                        <input type="email" id="adminemail" class="form-control">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Password:
+                        <input type="password" id="adminpass" class="form-control">
+                    </label>
+                </div>
+                <p>Once you've finished adding users on the right hand side, please feel free to hit submit</p>
+                <button class="btn btn-default">Submit</button>
+            </div>
+
+        </div>
+        <div class="col col-md-6">
+            <h2>Users</h2>
+            <div id="users" class="form-inline">
+
+            </div>
+            <br>
+            <button class="btn btn-primary" id="adduser" onclick="adduser()"><span class="glyphicon glyphicon-plus"></span> Add</button>
+        </div>
+
+    </div>
+    <script>
+        var users = 0
+
+        function adduser() {
+            $('#users').append("<div id='newuser' class='form-group'><input id='name" + users + "' placeholder='name' class='form-control'><input id='number" + users + "' placeholder='number with prefix e.g +44' class='form-control'></div><br>")
+            users++
+        }
+    </script>
+</div>
